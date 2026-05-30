@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Student</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light fw-semibold">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="https://intinstitute.com/public/assets/images/logo/int%20computer%20institute%20logo.png" alt="Logo" width="40" class="me-2">
+      INT Computer Institute
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-house me-1"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-telephone me-1"></i>Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-light px-3 me-2" href="#"><i class="bi bi-box-arrow-in-right me-1"></i>Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-light text-primary px-3" href="#"><i class="bi bi-person-plus me-1"></i>Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mb-5 mt-4" style="max-width:1100px;">
+
+  <!-- Header -->
+  <div class="d-flex align-items-center mb-4 p-3 bg-white rounded shadow-sm">
+    <img src="https://intinstitute.com/public/assets/images/logo/int%20computer%20institute%20logo.png" alt="Institute Logo" width="65" class="me-3">
+    <div>
+      <h4 class="mb-0 fw-bold">INT Computer Institute</h4>
+      <small class="text-muted">Student Enrollment Form</small>
+    </div>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Left Panel -->
+    <div class="col-md-3">
+
+      <!-- Photo Card -->
+      <div class="card shadow-sm text-center mb-3">
+        <div class="card-body">
+          <img src="https://imgs.search.brave.com/xmrcB0ByXo_INy759gGEnFot-IvZHz04zM2NHgrL3S8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjQv/NzcxLzE2MC9zbWFs/bC9tYWxlLWFzaWFu/LWNvbGxlZ2Utc3R1/ZGVudC1waG90by5q/cGc" class="rounded-circle mb-3 border border-3 border-primary" width="120" height="120" alt="Student Photo">
+          <h6 class="mb-0 fw-bold">ABHIJIT RANA</h6>
+          <small class="text-muted">Student</small>
+          <div class="mt-3">
+            <button class="btn btn-outline-primary btn-sm w-100">
+              <i class="bi bi-camera me-1"></i>Upload Photo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact & Address Card -->
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <i class="bi bi-info-circle me-1"></i> Student Info
+        </div>
+        <div class="card-body">
+          <p class="mb-1"><i class="bi bi-telephone-fill text-primary me-1"></i><strong>Mobile</strong></p>
+          <p class="text-muted mb-3">8101002089</p>
+
+          <p class="mb-1"><i class="bi bi-envelope-fill text-primary me-1"></i><strong>Email</strong></p>
+          <p class="text-muted mb-3">rana.abhijit7@gmail.com</p>
+
+          <hr class="my-2">
+
+          <p class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i><strong>Address</strong></p>
+          <p class="text-muted mb-0">House No, Street, Area<br>City, State - PIN<br>India</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Panel -->
+    <div class="col-md-9">
+      <form>
+
+        <!-- Personal Information -->
+        <div class="card shadow-sm mb-3">
+          <div class="card-header bg-primary text-white">
+            <i class="bi bi-person-fill me-1"></i> Personal Information
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-2">
+                <label class="form-label">Title</label>
+                <select class="form-select">
+                  <option>Mr</option>
+                  <option>Mrs</option>
+                  <option>Miss</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" value="ABHIJIT RANA">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" value="1995-02-03">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Gender</label>
+                <select class="form-select">
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Father's Name</label>
+                <input type="text" class="form-control" placeholder="Father's Full Name">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Mother's Name</label>
+                <input type="text" class="form-control" placeholder="Mother's Full Name">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Blood Group</label>
+                <select class="form-select">
+                  <option value="">-- Select --</option>
+                  <option>A+</option>
+                  <option>A-</option>
+                  <option>B+</option>
+                  <option>B-</option>
+                  <option>O+</option>
+                  <option>O-</option>
+                  <option>AB+</option>
+                  <option>AB-</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Nationality</label>
+                <input type="text" class="form-control" value="Indian">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Religion</label>
+                <input type="text" class="form-control" placeholder="Religion">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Aadhar Number</label>
+                <input type="text" class="form-control" placeholder="XXXX XXXX XXXX">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="card shadow-sm mb-3">
+          <div class="card-header">
+            <i class="bi bi-telephone-fill me-1"></i> Contact Information
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" value="8101002089">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Alternate Mobile</label>
+                <input type="tel" class="form-control" placeholder="Alternate Number">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" value="rana.abhijit7@gmail.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Alternate Email</label>
+                <input type="email" class="form-control" placeholder="Alternate Email">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Parent's Mobile</label>
+                <input type="tel" class="form-control" placeholder="Parent's Mobile Number">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Emergency Contact</label>
+                <input type="tel" class="form-control" placeholder="Emergency Contact Number">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">WhatsApp Number</label>
+                <input type="tel" class="form-control" placeholder="WhatsApp Number">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">LinkedIn Profile</label>
+                <input type="url" class="form-control" placeholder="https://linkedin.com/in/...">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Selection -->
+        <div class="card shadow-sm mb-4">
+          <div class="card-header">
+            <i class="bi bi-mortarboard-fill me-1"></i> Course Selection
+          </div>
+          <div class="card-body">
+            <label class="form-label mb-3">Select one or more courses</label>
+            <div class="row g-2">
+              <div class="col-md-4 col-6">
+                <input type="checkbox" class="form-check-input me-1" id="webdev">
+                <label class="form-check-label" for="webdev">Web Development</label>
+              </div>
+              <div class="col-md-4 col-6">
+                <input type="checkbox" class="form-check-input me-1" id="ml">
+                <label class="form-check-label" for="ml">Machine Learning</label>
+              </div>
+              <div class="col-md-4 col-6">
+                <input type="checkbox" class="form-check-input me-1" id="ds">
+                <label class="form-check-label" for="ds">Data Science</label>
+              </div>
+              <div class="col-md-4 col-6">
+                <input type="checkbox" class="form-check-input me-1" id="ai">
+                <label class="form-check-label" for="ai">Artificial Intelligence</label>
+              </div>
+              <div class="col-md-4 col-6">
+                <input type="checkbox" class="form-check-input me-1" id="cyber">
+                <label class="form-check-label" for="cyber">Cyber Security</label>
+              </div>
+              <div class="col-md-4 col-6">
+                <input type="checkbox" class="form-check-input me-1" id="cloud">
+                <label class="form-check-label" for="cloud">Cloud Computing</label>
+              </div>
+              <div class="col-md-4 col-6">
+                <input type="checkbox" class="form-check-input me-1" id="mobile">
+                <label class="form-check-label" for="mobile">Mobile App Development</label>
+              </div>
+              <div class="col-md-4 col-6">
+                <input type="checkbox" class="form-check-input me-1" id="db">
+                <label class="form-check-label" for="db">Database Management</label>
+              </div>
+              <div class="col-md-4 col-6">
+                <input type="checkbox" class="form-check-input me-1" id="devops">
+                <label class="form-check-label" for="devops">DevOps</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="text-end">
+          <button type="button" class="btn btn-secondary me-2">
+            <i class="bi bi-x me-1"></i>Cancel
+          </button>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-check2 me-1"></i>Save Student
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
