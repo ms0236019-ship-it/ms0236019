@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources Page</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <style>
+    .resource-card img {
+      height: 150px;
+      object-fit: cover;
+    }
+    .filter-group .btn {
+      min-width: 100px;
+    }
+    .filter-group .btn.active {
+      box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-light" style="font-family: Arial, sans-serif;">
+
+  <div class="container py-4">
+
+    <header class="d-flex justify-content-between align-items-start flex-wrap mb-4">
+      <div>
+        <h1 class="h2 fw-bold mb-1">Resources</h1>
+        <p class="text-muted mb-0">Home / Resources</p>
+      </div>
+
+      <form class="d-flex gap-2 mt-3 mt-md-0" role="search" aria-label="Search resources">
+        <label class="visually-hidden" for="resource-search">Search resources</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white border-end-0">
+            <i class="bi bi-search text-muted"></i>
+          </span>
+          <input id="resource-search" type="search" class="form-control border-start-0 ps-0" placeholder="Search resources..." />
+        </div>
+
+        <label class="visually-hidden" for="file-type-filter">File type filter</label>
+        <select id="file-type-filter" class="form-select w-auto">
+          <option>All File Types</option>
+          <option>PDF</option>
+          <option>Images</option>
+          <option>Excel</option>
+        </select>
+      </form>
+    </header>
+
+    <section class="row g-3 mb-4" aria-label="Resource summary cards">
+      <div class="col-sm-6 col-xl-3">
+        <article class="bg-white p-3 rounded-4 d-flex align-items-center gap-3 shadow-sm">
+          <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 55px; height: 55px; min-width: 55px;">
+            <i class="bi bi-file-earmark fs-4" aria-hidden="true"></i>
+          </div>
+          <div>
+            <p class="text-uppercase text-muted small mb-1">Total Resources</p>
+            <p class="h4 fw-bold mb-0">128</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-sm-6 col-xl-3">
+        <article class="bg-white p-3 rounded-4 d-flex align-items-center gap-3 shadow-sm">
+          <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 55px; height: 55px; min-width: 55px;">
+            <i class="bi bi-file-earmark-pdf fs-4" aria-hidden="true"></i>
+          </div>
+          <div>
+            <p class="text-uppercase text-muted small mb-1">Documents</p>
+            <p class="h4 fw-bold mb-0">74</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-sm-6 col-xl-3">
+        <article class="bg-white p-3 rounded-4 d-flex align-items-center gap-3 shadow-sm">
+          <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 55px; height: 55px; min-width: 55px;">
+            <i class="bi bi-image fs-4" aria-hidden="true"></i>
+          </div>
+          <div>
+            <p class="text-uppercase text-muted small mb-1">Images</p>
+            <p class="h4 fw-bold mb-0">32</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-sm-6 col-xl-3">
+        <article class="bg-white p-3 rounded-4 d-flex align-items-center gap-3 shadow-sm">
+          <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 55px; height: 55px; min-width: 55px;">
+            <i class="bi bi-folder fs-4" aria-hidden="true"></i>
+          </div>
+          <div>
+            <p class="text-uppercase text-muted small mb-1">Other Files</p>
+            <p class="h4 fw-bold mb-0">22</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+      <div class="btn-group filter-group flex-wrap" role="group" aria-label="Resource category filters">
+        <button type="button" class="btn btn-primary rounded-3 px-3 active" aria-pressed="true">All</button>
+        <button type="button" class="btn btn-outline-secondary rounded-3 px-3">Documents</button>
+        <button type="button" class="btn btn-outline-secondary rounded-3 px-3">Images</button>
+        <button type="button" class="btn btn-outline-secondary rounded-3 px-3">Excel</button>
+        <button type="button" class="btn btn-outline-secondary rounded-3 px-3">Other</button>
+      </div>
+
+      <div class="w-auto mt-2 mt-md-0">
+        <label class="visually-hidden" for="sort-order">Sort resources</label>
+        <select id="sort-order" class="form-select">
+          <option>Newest First</option>
+          <option>Oldest First</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="row g-4" aria-label="Resource cards">
+      <article class="col-md-6 col-xl-3">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white resource-card">
+          <img src="https://thfvnext.bing.com/th/id/OIP.JEbZQwC9SCVhrOwFnfN1SAHaJ4?w=208&h=277&c=7&r=0&o=7&cb=thfvnextfalcon&dpr=1.3&pid=1.7&rm=3" class="card-img-top rounded-3" alt="Admission form document preview" />
+          <div class="card-body px-0 pt-3 pb-0 d-flex flex-column justify-content-between">
+            <div>
+              <h2 class="h5 fw-bold mb-1">Admission Form</h2>
+              <p class="card-text text-muted small mb-0">Type: PDF</p>
+              <p class="card-text text-muted small mb-3">Size: 1.2 MB</p>
+            </div>
+            <div class="d-flex justify-content-between gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-secondary btn-sm w-100"><i class="bi bi-eye me-1"></i> Preview</button>
+              <button type="button" class="btn btn-primary btn-sm px-3" aria-label="Download Admission Form"><i class="bi bi-download"></i></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="col-md-6 col-xl-3">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white resource-card">
+          <img src="https://thfvnext.bing.com/th/id/OIP.JEbZQwC9SCVhrOwFnfN1SAHaJ4?w=208&h=277&c=7&r=0&o=7&cb=thfvnextfalcon&dpr=1.3&pid=1.7&rm=3" class="card-img-top rounded-3" alt="Excel report preview" />
+          <div class="card-body px-0 pt-3 pb-0 d-flex flex-column justify-content-between">
+            <div>
+              <h2 class="h5 fw-bold mb-1">Excel Report</h2>
+              <p class="card-text text-muted small mb-0">Type: XLSX</p>
+              <p class="card-text text-muted small mb-3">Size: 320 KB</p>
+            </div>
+            <div class="d-flex justify-content-between gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-secondary btn-sm w-100"><i class="bi bi-eye me-1"></i> Preview</button>
+              <button type="button" class="btn btn-primary btn-sm px-3" aria-label="Download Excel Report"><i class="bi bi-download"></i></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="col-md-6 col-xl-3">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white resource-card">
+          <img src="https://thfvnext.bing.com/th/id/OIP.JEbZQwC9SCVhrOwFnfN1SAHaJ4?w=208&h=277&c=7&r=0&o=7&cb=thfvnextfalcon&dpr=1.3&pid=1.7&rm=3" class="card-img-top rounded-3" alt="Poster design preview" />
+          <div class="card-body px-0 pt-3 pb-0 d-flex flex-column justify-content-between">
+            <div>
+              <h2 class="h5 fw-bold mb-1">Poster Design</h2>
+              <p class="card-text text-muted small mb-0">Type: JPG</p>
+              <p class="card-text text-muted small mb-3">Size: 2.4 MB</p>
+            </div>
+            <div class="d-flex justify-content-between gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-secondary btn-sm w-100"><i class="bi bi-eye me-1"></i> Preview</button>
+              <button type="button" class="btn btn-primary btn-sm px-3" aria-label="Download Poster Design"><i class="bi bi-download"></i></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="col-md-6 col-xl-3">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white resource-card">
+          <img src="https://thfvnext.bing.com/th/id/OIP.JEbZQwC9SCVhrOwFnfN1SAHaJ4?w=208&h=277&c=7&r=0&o=7&cb=thfvnextfalcon&dpr=1.3&pid=1.7&rm=3" class="card-img-top rounded-3" alt="Receipt book preview" />
+          <div class="card-body px-0 pt-3 pb-0 d-flex flex-column justify-content-between">
+            <div>
+              <h2 class="h5 fw-bold mb-1">Receipt Book</h2>
+              <p class="card-text text-muted small mb-0">Type: PDF</p>
+              <p class="card-text text-muted small mb-3">Size: 1.1 MB</p>
+            </div>
+            <div class="d-flex justify-content-between gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-secondary btn-sm w-100"><i class="bi bi-eye me-1"></i> Preview</button>
+              <button type="button" class="btn btn-primary btn-sm px-3" aria-label="Download Receipt Book"><i class="bi bi-download"></i></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </div>
+
+</body>
+</html>
